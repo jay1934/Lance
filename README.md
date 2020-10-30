@@ -20,7 +20,7 @@
 
 ##### Downloading and installing steps
 
-1.  **[Download](https://github.com/jay1934/Reaction-Role-Bot/archive/master.zip)** the `zip` file.
+1.  **[Download](https://github.com/jay1934/Reaction-Role-Bot/archive/main.zip)** the `zip` file.
 
 2.  Configure the Bot:
     -   Run `npm i`
