@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![](https://media.discordapp.net/attachments/719694477027180544/771816446572494859/1604085773603.png)
+![](https://media.discordapp.net/attachments/719694477027180544/771852466940805161/1604094355172.png)
 
 ## Reaction Roles Bot
 
