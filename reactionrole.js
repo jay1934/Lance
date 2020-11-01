@@ -130,11 +130,8 @@ module.exports = async (message, map) => {
                 if (__content === 'cancel')
                   return err('Wizard canceled.', embed);
                 const emojis = embed.reactions.cache
-                  .filter(
-                    (reaction) =>
-                      !reaction.users.cache.some(
-                        (user) => user.id === message.author.id
-                      )
+                  .filter((reaction) =>
+                     reaction.users.cache.has(message.author.id)
                   )
                   .reduce(
                     (acc, { emoji }) =>
