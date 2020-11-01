@@ -1,4 +1,4 @@
-const { Client, Collection } = require('discord.js');
+const { Client, Collection } = require("discord.js");
 
 module.exports = class Lance extends Client {
   /**
@@ -17,25 +17,11 @@ module.exports = class Lance extends Client {
    */
   constructor(Configuration, ClientOptions) {
     super(ClientOptions);
-    this._config = Configuration;
-    this._commands = new Collection();
-    this._voices = new Collection();
-    this._messages = new Collection();
-  }
-
-  get config() {
-    return this._config;
-  }
-
-  get commands() {
-    return this._commands;
-  }
-
-  get voices() {
-    return this._voices;
-  }
-
-  get messages() {
-    return this._messages;
+    Object.assign(this, {
+      config: Configuration,
+      commands: new Collection(),
+      voices: new Collection(),
+      messages: new Collection(),
+    });
   }
 };
