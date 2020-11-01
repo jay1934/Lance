@@ -13,5 +13,5 @@ module.exports = {
   // provide the bot's prefix (case-sensitive)
   prefix: '!L ',
   // provide the bot's token (full instructions in the README)
-  token: 'NzcyMjA2MDQ2MTkwMTA4Njcy.X53S7A.tEL1GEBo36tdbjQl61ivzR_eO2g', // 'asY6ADna7i868AiPogChampYouFoundASecret4iad73IWUa6',
+  token: 'asY6ADna7i868AiPogChampYouFoundASecret4iad73IWUa6',
 };
