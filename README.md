@@ -22,7 +22,8 @@ Currently a merged version of two bots: a Reaction Role Bot and a Temporary Voic
 
     - Run `npm i`
     - You will need to [create a bot application](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot) in the **[developers space](https://discordapp.com/developers/applications/me)**
-      - [**Make sure you enable the `GUILD_MEMBERS` and `GUILD_PRESENCES` intent**](/assets/misc/intents.jpg)
+      - **Make sure you enable the `GUILD_MEMBERS` and `GUILD_PRESENCES` intent**
+      ![](/assets/misc/intents.jpg)
     - Replace the placeholders in [`config.js`](/config.js) with your preffered settings, **along with your bot token**. This file acts as a JSON, only I'm able to add comments.
 
 3.  Invite the Bot to your Server:
@@ -49,7 +50,7 @@ Currently a merged version of two bots: a Reaction Role Bot and a Temporary Voic
 
 <br>
 
-![](/assets/images/reactionsBanner.png)
+![](/assets/logos/reactionsBanner.png)
 
 <div align="center">
 
@@ -99,7 +100,7 @@ Disregard how long it takes for the emojis to unreact. That's not the code, it's
 
 <div align="center">
 
-![](/assets/images/channelsBanner.png)
+![](/assets/logos/channelsBanner.png)
 
 ## Voice Channels Bot
 
