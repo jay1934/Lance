@@ -21,7 +21,7 @@ module.exports = (client) => {
       if (
         message.channel.messages.cache.some(
           ({ author, content }) =>
-            author.id === client.is &&
+            author.id === client.id &&
             content ===
               "That role is above mine in the role hierarchy, so I can't assign/unassign it to/from any member."
         )
