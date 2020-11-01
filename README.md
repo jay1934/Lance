@@ -26,7 +26,7 @@
     -   Run `npm i`
     -   You will need to [create a bot application](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot) in the **[developers space](https://discordapp.com/developers/applications/me)**
         - [**Make sure you enable the `GUILD_MEMBERS` intent**](https://media.discordapp.net/attachments/769862166131245066/771303808390266900/image0.png?width=1359&height=671)
-    - Replace the placeholder "token" in [`index.js`](https://github.com/jay1934/Reaction-Role-Bot/blob/master/index.js#L6) with your bot's token
+    - Replace the placeholder "token" in [`index.js`](/index.js#L6) with your bot's token
 
 3.  Invite the Bot to your Server:
     - In your bot's application page, navigate to [OAUTH2](https://discord.com/developers/applications/771430839250059274/oauth2) 
@@ -77,6 +77,6 @@ When making the original order, you pointed out that you would like the capabili
 
 </div>
 
-![](./demo.gif)
+![](/demo.gif)
 
 Disregard how long it takes for the emojis to unreact. That's not the code, it's just my wifi acting up 🤣
