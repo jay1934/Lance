@@ -16,7 +16,7 @@ Currently a merged version of two bots: a Reaction Role Bot and a Temporary Voic
 
 ##### Downloading and installing steps
 
-1.  **[Download](https://github.com/jay1934/Reaction-Role-Bot/archive/merged.zip)** the `zip` file.
+1.  **[Download](https://github.com/jay1934/Lance/archive/main.zip)** the `zip` file.
 
 2.  Configure the Bot:
 
