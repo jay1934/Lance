@@ -1,7 +1,6 @@
 const Lance = require('./classes/Lance.js');
 
-const client = new Lance(require('./config.js'));
-require('./util/events.js')(client);
-require('./util/commands.js')(client);
+const client = new Lance();
+require('./util/handlers/events.js')(client);
 
-client.login(client.config.token);
+client.login(client.config.general.token);
