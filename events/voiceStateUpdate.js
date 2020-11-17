@@ -8,7 +8,8 @@ module.exports = async (
       voiceChannels: {
         channelID,
         categoryID,
-        newChannelName: name,
+        roleID,
+	newChannelName: name,
         delayBeforeDeletion: delay,
       },
     },
@@ -30,6 +31,7 @@ module.exports = async (
             permissionOverwrites: [
               { id: guild.id, deny: ['VIEW_CHANNEL', 'CONNECT'] },
               { id: member.id, allow: Permissions.ALL },
+	      { id: roleID, allow: ['VIEW_CHANNEL', 'CONNECT'] },
             ],
           }
         )

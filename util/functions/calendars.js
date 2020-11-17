@@ -65,7 +65,11 @@ module.exports = {
                   zone: tz,
                 });
               }
-              if (eStartDate.day - 1 === date) {
+	      // log(`eStartDate.weekday: ${eStartDate.weekday}  date: ${date}  day: ${eStartDate.day}`);
+	      if (date > 7) {
+	        date = 1;
+	      }
+	      if ((eStartDate.weekday) === (date)) {
                 matches.push({
                   id: json[i].id,
                   summary: json[i].summary,

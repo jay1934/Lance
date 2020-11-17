@@ -9,7 +9,7 @@ const apiClient = new ApiClient({ authProvider });
 const listener = new WebHookListener(
   apiClient,
   new EnvPortAdapter({
-    hostName: require('./config/settings.json').technical.hostName,
+    hostName: require('./config/settings.json').technical.hostName
   }),
   {
     hookValidity: 80,

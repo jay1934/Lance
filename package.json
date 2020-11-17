@@ -19,5 +19,5 @@
     "twitch": "^4.2.7",
     "twitch-auth": "^4.2.7",
     "twitch-webhooks": "^4.2.7"
-  },
+  }
 }
