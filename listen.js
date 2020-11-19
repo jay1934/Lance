@@ -1,6 +1,6 @@
 const { ApiClient } = require('twitch');
 const { ClientCredentialsAuthProvider } = require('twitch-auth');
-const { WebHookListener, EnvPortAdapter } = require('twitch-webhooks');
+const { WebHookListener, EnvPortAdapter, SimpleAdapter } = require('twitch-webhooks');
 const { id, secret } = require('./config/security/twitch.json');
 const { readFile } = require('./util/functions/database.js');
 
@@ -8,12 +8,10 @@ const authProvider = new ClientCredentialsAuthProvider(id, secret);
 const apiClient = new ApiClient({ authProvider });
 const listener = new WebHookListener(
   apiClient,
-  new EnvPortAdapter({
-    hostName: require('./config/settings.json').technical.hostName
-  }),
-  {
-    hookValidity: 80,
-  }
+  new SimpleAdapter({
+    hostName: require('./config/settings.json').technical.hostName,
+    listenerPort: require('./config/settings.json').technical.listenerPort
+  })
 );
 
 function subscribe(guild) {
@@ -27,14 +25,14 @@ function subscribe(guild) {
     if (!member) return;
     const user = await apiClient.helix.users.getUserByName(streamer);
     let previous = await apiClient.helix.streams.getStreamByUserName(streamer);
-    listener.subscribeToStreamChanges(user, async (stream) => {
+    await listener.subscribeToStreamChanges(user, async (stream) => {
       if (stream) {
         if (!previous) {
           const game = await stream.getGame();
           guild.channels.cache
             .get(streamAlertChannelID)
             .send(
-              `Hey everyone, ${user.displayName} is live on https://twitch.tv/${streamer} ! Go check it out!`,
+              `Hey everyone, ${member.displayName} is live on https://twitch.tv/${streamer} ! Go check it out!`,
               {
                 embed: {
                   thumbnail: {
