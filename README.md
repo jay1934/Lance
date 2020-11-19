@@ -4,7 +4,7 @@
 
 Currently a merged version of three bots: a Reaction Role Bot, a Temporary Voice Channel Bot, Google Calendar Bot, and a Twitch Alerts Bot. Hopefully more to come!
 
-[Installation](#Installation) • [Reaction Roles Bot](#Reaction-Roles-Bot) • [Voice Channels Bot](#Voice-Channels-Bot) • [Google Calendar Bot](#Google-Calendar-Bot) • [Twitch Alerts Bot](#Twitch Alert Bot)
+[Installation](#Installation) • [Reaction Roles Bot](#Reaction-Roles-Bot) • [Voice Channels Bot](#Voice-Channels-Bot) • [Google Calendar Bot](#Google-Calendar-Bot) • [Twitch Alerts Bot](#Twitch-Alert-Bot)
 
 ## Installation
 
