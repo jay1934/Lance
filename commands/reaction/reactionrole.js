@@ -190,18 +190,23 @@ module.exports = {
                     return collect();
                   }
                   __messages.first().delete();
+                  const map = client.messages;
                   roles.forEach((role, idx) => {
-                    const map = client.messages.get(_message.id);
+                    const reactions = map[_message.id];
                     const emoji = emojis[idx].id || emojis[idx].name;
-                    map
-                      ? map.set(emoji, role)
-                      : client.messages.set(
-                          _message.id,
-                          new Map([[emoji, role]])
-                        );
+                    reactions
+                      ? (reactions[emoji] = role)
+                      : (map[_message.id] = {
+                          [emoji]: role,
+                          channel: channel.id,
+                        });
                     _message.react(emoji);
                   });
                   await embed.reactions.removeAll();
+                  require('fs').writeFileSync(
+                    './data/reactionDatabase.json',
+                    JSON.stringify(map, '', 2)
+                  );
                   return embed
                     .edit({
                       embed: {
