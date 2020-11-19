@@ -7,8 +7,13 @@ module.exports = class Lance extends Client {
       config: require('../config/settings.json'),
       commands: new Collection(),
       voices: new Collection(),
-      messages: new Collection(),
       streams: new Collection(),
     });
+  }
+
+  get messages() {
+    return JSON.parse(
+      require('fs').readFileSync('./data/reactionDatabase.json')
+    );
   }
 };
