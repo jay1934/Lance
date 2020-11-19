@@ -1,3 +1,8 @@
 module.exports = ({ id }, { messages }) => {
-  if (messages.has(id)) messages.get(id).clear();
+  if (!messages[id]) return;
+  delete messages[id];
+  require('fs').writeFileSync(
+    './data/reactionDatabase.json',
+    JSON.stringify(messages, '', 2)
+  );
 };
