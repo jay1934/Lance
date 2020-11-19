@@ -16,5 +16,6 @@ module.exports = async (client) => {
     guilds.create(client.guilds.cache.get(guildId));
   });
   require('../util/handlers/commands.js')(client);
+  require('../util/handlers/reactions.js')(client);
   require('../listen.js').restartListener(client.guilds.cache.first());
 };
